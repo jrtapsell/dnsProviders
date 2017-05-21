@@ -16,8 +16,8 @@
     },
     "OVH": {
       "records": ["Registrar", "DNSSEC", "SSHFP", "SRV", "TLSA"],
-      "icon": "http://www.ovh.com/favicon.ico",
-      "url": "http://www.ovh.com/"
+      "icon": "https://www.ovh.com/favicon.ico",
+      "url": "https://www.ovh.com/"
     },
     "Route 53": {
       "records": ["Registrar", "SRV", "ALIAS"],
