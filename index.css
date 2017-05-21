@@ -1,0 +1,31 @@
+.favicon {
+    height: 2em;
+    width: 2em;
+}
+
+.fa-check {
+    color: green;
+}
+
+.fa-times {
+    color: red;
+}
+
+.fa {
+    font-weight:900 !important;
+}
+
+h1 {
+    text-align: center;
+    width:100%;
+}
+
+.left2 {
+    padding-left: 2em
+}
+
+.no-providers {
+    font-weight:900;
+    font-size: 2em;
+    text-align: center !important;
+}
