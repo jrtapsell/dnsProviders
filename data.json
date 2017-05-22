@@ -25,7 +25,7 @@
       "url":  "https://aws.amazon.com"
     },
     "Google Cloud DNS": {
-      "records": ["Registrar", "DNSSEC", "SRV, CAA"],
+      "records": ["Registrar", "DNSSEC", "SRV", "CAA"],
       "icon": "https://cloud.google.com/favicon.ico",
       "url": "https://cloud.google.com/"
     },
