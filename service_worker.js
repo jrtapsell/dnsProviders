@@ -1,5 +1,7 @@
 var version = 'v1::';
 self.addEventListener("fetch", function(event) {
+  var url = event.request.url;
+  event.request.url = event.request.url.split("?")[0];
   console.log('WORKER: fetch event in progress.');
 
   if (event.request.method !== 'GET') {
@@ -14,7 +16,7 @@ self.addEventListener("fetch", function(event) {
           .then(fetchedFromNetwork, unableToResolve)
           .catch(unableToResolve);
 
-        console.log('WORKER: fetch event', cached ? '(cached)' : '(network)', event.request.url);
+        console.log('WORKER: fetch event', cached ? '(cached)' : '(network)', url);
         return cached || networked;
 
         function fetchedFromNetwork(response) {
