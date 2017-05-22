@@ -1,3 +1,4 @@
+var version = 'v1::';
 self.addEventListener("fetch", function(event) {
   console.log('WORKER: fetch event in progress.');
 
@@ -5,7 +6,6 @@ self.addEventListener("fetch", function(event) {
     console.log('WORKER: fetch event ignored.', event.request.method, event.request.url);
     return;
   }
-
   event.respondWith(
     caches
       .match(event.request)
