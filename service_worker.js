@@ -1,7 +1,6 @@
 var version = 'v1::';
 self.addEventListener("fetch", function(event) {
   var url = event.request.url;
-  event.request.url = event.request.url.split("?")[0];
   console.log('WORKER: fetch event in progress.');
 
   if (event.request.method !== 'GET') {
