@@ -48,6 +48,9 @@
       "records": ["Registrar", "SRV", "CAA", "ALIAS"],
       "icon": "https://dnsmadeeasy.com/favicon.ico",
       "url": "https://dnsmadeeasy.com/"
+    },
+    "GoDaddy": {
+      "records": ["Registrar", "DNSSEC", "SRV"]
     }
   }
 }
