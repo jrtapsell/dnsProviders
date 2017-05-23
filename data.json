@@ -10,52 +10,101 @@
   ],
   "providers": {
     "Cloudflare": {
-      "records": ["DNSSEC", "ALIAS"],
+      "records": [
+        "DNSSEC",
+        "ALIAS"
+      ],
       "icon": "https://www.cloudflare.com/favicon.ico",
       "url": "https://www.cloudflare.com/"
     },
     "OVH": {
-      "records": ["Registrar", "DNSSEC", "SSHFP", "SRV", "TLSA"],
+      "records": [
+        "Registrar",
+        "DNSSEC",
+        "SSHFP",
+        "SRV",
+        "TLSA"
+      ],
       "icon": "https://www.ovh.com/favicon.ico",
       "url": "https://www.ovh.com/"
     },
     "Route 53": {
-      "records": ["Registrar", "SRV", "ALIAS"],
+      "records": [
+        "Registrar",
+        "SRV",
+        "ALIAS"
+      ],
       "icon": "https://aws.amazon.com/favicon.ico",
-      "url":  "https://aws.amazon.com"
+      "url": "https://aws.amazon.com"
     },
     "Google Cloud DNS": {
-      "records": ["Registrar", "DNSSEC", "SRV", "CAA"],
+      "records": [
+        "Registrar",
+        "DNSSEC",
+        "SRV",
+        "CAA"
+      ],
       "icon": "https://cloud.google.com/favicon.ico",
       "url": "https://cloud.google.com/"
     },
     "DNSimple": {
-      "records": ["Registrar", "DNSSEC", "SRV", "SSHFP", "CAA", "ALIAS"],
+      "records": [
+        "Registrar",
+        "DNSSEC",
+        "SRV",
+        "SSHFP",
+        "CAA",
+        "ALIAS"
+      ],
       "icon": "https://dnsimple.com/assets/favicon-655132b58b83af3a4823108f3ce560098b7c5d076a62d460baf0b70b08292ee6.ico",
       "url": "https://dnsimple.com/"
     },
     "ClouDNS": {
-      "records": ["Registrar", "SRV", "SSHFP", "ALIAS"],
+      "records": [
+        "Registrar",
+        "SRV",
+        "SSHFP",
+        "ALIAS"
+      ],
       "icon": "https://www.cloudns.net/favicon.ico",
       "url": "https://www.cloudns.net/"
     },
     "Constellix": {
-      "records": ["Registrar", "SRV", "CAA"],
+      "records": [
+        "Registrar",
+        "SRV",
+        "CAA"
+      ],
       "icon": "https://constellix.com/favicon.ico",
       "url": "https://constellix.com/"
     },
     "DNS Made Easy": {
-      "records": ["Registrar", "SRV", "CAA", "ALIAS"],
+      "records": [
+        "Registrar",
+        "SRV",
+        "CAA",
+        "ALIAS"
+      ],
       "icon": "https://dnsmadeeasy.com/favicon.ico",
       "url": "https://dnsmadeeasy.com/"
     },
     "GoDaddy": {
-      "records": ["Registrar", "DNSSEC", "SRV"],
+      "records": [
+        "Registrar",
+        "DNSSEC",
+        "SRV"
+      ],
       "icon": "https://img1.wsimg.com/assets/godaddy.ico",
       "url": "https://www.godaddy.com/"
     },
-    "Ghandi": ["Registrar", "DNSSEC", "SRV"],
-    "icon": "https://www.gandi.net/favicon.ico",
-    "url":"https://www.gandi.net/"
+    "Ghandi": {
+      "records": [
+        "Registrar",
+        "DNSSEC",
+        "SRV"
+      ],
+      "icon": "https://www.gandi.net/favicon.ico",
+      "url": "https://www.gandi.net/"
+    }
   }
 }
