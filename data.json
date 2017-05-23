@@ -106,5 +106,14 @@
       "icon": "https://www.gandi.net/favicon.ico",
       "url": "https://www.gandi.net/"
     }
+  },
+  "Namecheap": {
+    "records": [
+      "Registrar",
+      "DNSSEC",
+      "SRV"
+    ],
+    "icon": "https://www.namecheap.com/favicon.ico",
+    "url": "https://www.namecheap.com/"
   }
 }
