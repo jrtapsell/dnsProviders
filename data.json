@@ -53,6 +53,9 @@
       "records": ["Registrar", "DNSSEC", "SRV"],
       "icon": "https://img1.wsimg.com/assets/godaddy.ico",
       "url": "https://www.godaddy.com/"
-    }
+    },
+    "Ghandi": ["Registrar", "DNSSEC", "SRV"],
+    "icon": "https://www.gandi.net/favicon.ico",
+    "url":"https://www.gandi.net/"
   }
 }
