@@ -1,5 +1,4 @@
 Handlebars.registerHelper("contains", function (value, object) {
-  console.log("CONTAINS", value, object);
   return object.indexOf(value) > -1;
 });
 
@@ -20,7 +19,6 @@ function on_ready(template, data) {
     }
     url_params[items[0]] = items[1];
   });
-  console.log(url_params);
 
   var filtered_data = {};
   filtered_data["records"] = data["records"];
@@ -35,7 +33,7 @@ function on_ready(template, data) {
     filtered_data["providers"][p_key] = data["providers"][p_key];
   });
 
-  var page = template(filtered_data);
+  var page = template({"data":filtered_data, "arguments": url_params});
   $("body").html(page);
 
 

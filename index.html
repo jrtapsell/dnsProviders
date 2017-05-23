@@ -15,14 +15,7 @@
     <meta name="description" content="A simple tool (still in beta) for comparing DNS providers, to find the best DNS provider supporting the records you need">
     <script>
         if ('serviceWorker' in navigator) {
-            console.log('CLIENT: service worker registration in progress.');
-            navigator.serviceWorker.register('./service_worker.js').then(function() {
-                console.log('CLIENT: service worker registration complete.');
-            }, function() {
-                console.log('CLIENT: service worker registration failure.');
-            });
-        } else {
-            console.log('CLIENT: service worker is not supported.');
+            navigator.serviceWorker.register('./service_worker.js');
         }
     </script>
 </head>

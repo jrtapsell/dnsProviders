@@ -4,6 +4,20 @@
         <h1>
             DNS Providers Comparison Tool
         </h1>
+
+        {{#with arguments}}
+            <div class="mdl-cell--12-col">
+            <h2>Showing providers supporting:</h2></div><div class="mdl-cell--12-col">
+            <h3>
+            {{#each this}}
+                {{#with (lookup ../../data/records @key)}}
+                    {{#if label}}{{label}}{{else}}{{@key}}{{/if}}
+                    {{#unless @last}}, {{/unless}}
+                {{/with}}
+            {{/each}}
+            </h3></div>
+        {{/with}}
+        {{#with data}}
             <div class="mdl-cell--12-col mdl-grid">
             <div class="mdl-layout-spacer"></div>
             {{#each records}}
@@ -41,7 +55,7 @@
                     </td>
                 </tr>
             {{/each}}
-
+        {{/with}}
         </table>
     </div>
     <div class="mdl-layout-spacer"></div>
