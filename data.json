@@ -50,7 +50,9 @@
       "url": "https://dnsmadeeasy.com/"
     },
     "GoDaddy": {
-      "records": ["Registrar", "DNSSEC", "SRV"]
+      "records": ["Registrar", "DNSSEC", "SRV"],
+      "icon": "https://img1.wsimg.com/assets/godaddy.ico",
+      "url": "https://www.godaddy.com/"
     }
   }
 }
