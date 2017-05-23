@@ -1,5 +1,6 @@
 Handlebars.registerHelper("contains", function (value, object) {
-  return object.indexOf(value) > -1
+  console.log("CONTAINS", value, object);
+  return object.indexOf(value) > -1;
 });
 
 Handlebars.registerHelper("check", function(value) {

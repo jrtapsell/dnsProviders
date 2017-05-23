@@ -1,17 +1,24 @@
 {
-  "records": [
-    "Registrar",
-    "DNSSEC",
-    "SSHFP",
-    "SRV",
-    "TLSA",
-    "CAA",
-    "ALIAS"
-  ],
+  "records": {
+    "Registrar": {
+      "size": 6
+    },
+    "Nameservers": {
+      "label": "DNS Only",
+      "size": 6
+    },
+    "DNSSEC": {},
+    "SSHFP": {},
+    "SRV": {},
+    "TLSA": {},
+    "CAA": {},
+    "ALIAS": {}
+  },
   "providers": {
     "Cloudflare": {
       "records": [
         "DNSSEC",
+        "Nameservers",
         "ALIAS"
       ],
       "icon": "https://www.cloudflare.com/favicon.ico",
@@ -31,6 +38,7 @@
     "Route 53": {
       "records": [
         "Registrar",
+        "Nameservers",
         "SRV",
         "ALIAS"
       ],
@@ -40,6 +48,7 @@
     "Google Cloud DNS": {
       "records": [
         "Registrar",
+        "Nameservers",
         "DNSSEC",
         "SRV",
         "CAA"
@@ -50,6 +59,7 @@
     "DNSimple": {
       "records": [
         "Registrar",
+        "Nameservers",
         "DNSSEC",
         "SRV",
         "SSHFP",
@@ -62,6 +72,7 @@
     "ClouDNS": {
       "records": [
         "Registrar",
+        "Nameservers",
         "SRV",
         "SSHFP",
         "ALIAS"
@@ -72,6 +83,7 @@
     "Constellix": {
       "records": [
         "Registrar",
+        "Nameservers",
         "SRV",
         "CAA"
       ],
@@ -81,6 +93,7 @@
     "DNS Made Easy": {
       "records": [
         "Registrar",
+        "Nameservers",
         "SRV",
         "CAA",
         "ALIAS"

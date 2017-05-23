@@ -7,10 +7,10 @@
             <div class="mdl-cell--12-col mdl-grid">
             <div class="mdl-layout-spacer"></div>
             {{#each records}}
-                <div class="mdl-cell--1-col mdl-cell left2">
-                    {{this}}
-                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-{{this}}">
-                        <input type="checkbox" id="switch-{{this}}" class="mdl-switch__input filter_toggle" data-type="{{this}}">
+                <div class="mdl-cell--{{#if size}}{{size}}{{else}}2{{/if}}-col mdl-cell left2">
+                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-{{@key}}">
+                        <input type="checkbox" id="switch-{{@key}}" class="mdl-switch__input filter_toggle" data-type="{{@key}}">
+                        <span class="mdl-switch__label">{{#if label}}{{label}}{{else}}{{@key}}{{/if}}</span>
                     </label>
                 </div>
             {{/each}}
@@ -21,7 +21,7 @@
                 <th></th>
                 <th>Provider</th>
                 {{#each records}}
-                    <th>{{this}}</th>
+                    <th>{{#if label}}{{label}}{{else}}{{@key}}{{/if}}</th>
                 {{/each}}
             </tr>
             {{#each providers}}
@@ -30,7 +30,7 @@
                     <td>{{@key}}</td>
                     {{#each ../records}}
                         <td>
-                            {{check (contains this ../records)}}
+                            {{check (contains @key ../records)}}
                         </td>
                     {{/each}}
                 </tr>
