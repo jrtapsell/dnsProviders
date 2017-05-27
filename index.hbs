@@ -1,59 +1,57 @@
-<div class="mdl-cell--12-col mdl-grid">
-    <div class="mdl-layout-spacer"></div>
-    <div class="mdl-cell--8-col mdl-grid">
-
-        {{#with arguments}}
-            <div class="mdl-cell--12-col">
-            <h2>Showing providers supporting:</h2></div><div class="mdl-cell--12-col">
-            <h3>
+{{#with arguments}}
+    <div class="mdl-cell--12-col">
+        <h2>Showing providers supporting:</h2>
+    </div>
+    <div class="mdl-cell--12-col">
+        <h3>
             {{#each this}}
                 {{#with (lookup ../../data/records @key)}}
                     {{#if label}}{{label}}{{else}}{{@key}}{{/if}}
                     {{#unless @last}}, {{/unless}}
                 {{/with}}
+            {{else}}
+                All providers
             {{/each}}
-            </h3></div>
-        {{/with}}
-        {{#with data}}
-            <div class="mdl-cell--12-col mdl-grid">
-            <div class="mdl-layout-spacer"></div>
+        </h3></div>
+{{/with}}
+{{#with data}}
+    <div class="mdl-class mdl-grid mdl-cell--12-col">
+        <div class="mdl-cell--2-col mdl-grid">
             {{#each records}}
-                <div class="mdl-cell--{{#if size}}{{size}}{{else}}2{{/if}}-col mdl-cell left2">
+                <div class="mdl-cell mdl-cell--12-col">
                     <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-{{@key}}">
-                        <input type="checkbox" id="switch-{{@key}}" class="mdl-switch__input filter_toggle" data-type="{{@key}}">
+                        <input type="checkbox" id="switch-{{@key}}" class="mdl-switch__input filter_toggle"
+                               data-type="{{@key}}">
                         <span class="mdl-switch__label">{{#if label}}{{label}}{{else}}{{@key}}{{/if}}</span>
                     </label>
                 </div>
             {{/each}}
-            <div class="mdl-layout-spacer"></div>
-            </div>
-        <table class="mdl-data-table mdl-js-data-table mdl-cell--12-col">
-            <tr>
-                <th></th>
-                <th>Provider</th>
-                {{#each records}}
-                    <th>{{#if label}}{{label}}{{else}}{{@key}}{{/if}}</th>
+        </div>
+    <table class="mdl-data-table mdl-js-data-table mdl-cell--10-col">
+        <tr>
+            <th></th>
+            <th>Provider</th>
+            {{#each records}}
+                <th>{{#if label}}{{label}}{{else}}{{@key}}{{/if}}</th>
+            {{/each}}
+        </tr>
+    {{#each providers}}
+            <tr onclick="window.location = '{{url}}'">
+                <td><img src="{{icon}}" class="favicon"/></td>
+                <td>{{@key}}</td>
+                {{#each ../records}}
+                    <td>
+                        {{check (contains @key ../records)}}
+                    </td>
                 {{/each}}
             </tr>
-            {{#each providers}}
-                <tr onclick="window.location = '{{url}}'">
-                    <td><img src="{{icon}}" class="favicon"/></td>
-                    <td>{{@key}}</td>
-                    {{#each ../records}}
-                        <td>
-                            {{check (contains @key ../records)}}
-                        </td>
-                    {{/each}}
-                </tr>
-            {{else}}
-                <tr>
-                    <td colspan="100%" class="no-providers">
-                        No providers found
-                    </td>
-                </tr>
-            {{/each}}
-        {{/with}}
-        </table>
-    </div>
-    <div class="mdl-layout-spacer"></div>
+    {{else}}
+            <tr>
+                <td colspan="100%" class="no-providers">
+                    No providers found
+                </td>
+            </tr>
+    {{/each}}
+{{/with}}
+</table>
 </div>

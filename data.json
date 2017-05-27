@@ -4,7 +4,7 @@
       "size": 6
     },
     "Nameservers": {
-      "label": "DNS Only",
+      "label": "External Nameservers",
       "size": 6
     },
     "DNSSEC": {},
