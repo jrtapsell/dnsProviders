@@ -29,3 +29,12 @@ h1 {
     font-size: 2em;
     text-align: center !important;
 }
+
+img.img-icon {
+    height: 2em;
+    padding-right: 1em;
+}
+
+h1.mdl-layout-title {
+    text-align: left;
+}

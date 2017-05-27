@@ -34,7 +34,7 @@ function on_ready(template, data) {
   });
 
   var page = template({"data":filtered_data, "arguments": url_params});
-  $("body").html(page);
+  $("#pageContent").html(page);
 
 
   $.each($(".filter_toggle"), function (_, item) {
