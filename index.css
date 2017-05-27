@@ -38,3 +38,12 @@ img.img-icon {
 h1.mdl-layout-title {
     text-align: left;
 }
+
+
+
+header.mdl-layout__header.is-casting-shadow {
+    display: block !important;
+}
+.mdl-layout__header-row {
+    padding: 0 14px 0 1em !important;
+}
