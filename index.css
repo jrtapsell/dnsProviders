@@ -47,3 +47,7 @@ header.mdl-layout__header.is-casting-shadow {
 .mdl-layout__header-row {
     padding: 0 14px 0 1em !important;
 }
+
+footer {
+    text-align: center;
+}
